@@ -1,0 +1,6 @@
+/COCOdataset2017/
+/aerial_dataSet/
+/COCO_trained_models/
+/parseCOCOdataset.py
+/unet model for COCO dataset.py
+/Segmentaion train evaluate display.py

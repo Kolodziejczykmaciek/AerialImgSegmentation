@@ -12,7 +12,7 @@ np.random.seed(1000)
     Keep in mind that it weights about 20Gb.
 '''
 
-def aerialDataPrepare(num_train_img):
+def aerialDataTrain(num_train_img):
     '''
         This method returns given number of training images and corresponding masks as a nd.array.
         Images in data set are 5000x5000 pixels this method cuts every image and its binary mask into 512x512
@@ -88,7 +88,6 @@ def aerialValidationData(num_val_img):
 
     validation_images = os.listdir(image_directory)
     random.shuffle(validation_images)
-    print(validation_images)
     n = 0
     for i, image_name in enumerate(validation_images):
         print("Interation no.{}".format(i))
