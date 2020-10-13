@@ -16,7 +16,7 @@ np.random.seed = seed
 
 
 
-X_val = aerialValidationData(1000)
+X_val = aerialValidationData(100)
 
 # for i in range(20): # Can use this loop to look through loaded train/val images
 #

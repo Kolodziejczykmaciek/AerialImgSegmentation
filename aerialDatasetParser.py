@@ -13,16 +13,6 @@ np.random.seed(1000)
 '''
 
 def aerialDataTrain(num_train_img):
-    '''
-        This method returns given number of training images and corresponding masks as a nd.array.
-        Images in data set are 5000x5000 pixels this method cuts every image and its binary mask into 512x512
-        training images.
-        One 5000x5000 pixel image is cut into 100 images.
-
-        For now the method is hardcoded to evaluate training 5000x5000 pixel images into 512x512 but
-        it can by transormed to return images in different resolution. As far as i konw the resolution must be always
-        divisible by 32.
-    '''
 
     IMG_HEIGHT = 512
     IMG_WIDTH = 512
@@ -65,19 +55,10 @@ def aerialDataTrain(num_train_img):
     return X_train, Y_train
 
 def aerialValidationData(num_val_img):
-    '''
-        This method returns given number of 100xvalidation images as a nd.array.
-        Images in data set are 5000x5000 pixels this method cuts every image into 512x512 validation images.
-        One 5000x5000 pixel image is cut into 100 images.
-
-        For now the method is hardcoded to evaluate validation 5000x5000 pixel images into 512x512 but
-        it can by transormed to return images in different resolution. As far as i konw the resolution must be always
-        divisible by 32.
-    '''
 
     IMG_HEIGHT = 512
     IMG_WIDTH = 512
-    IMG_CHANNELS = 3 #RGB
+    IMG_CHANNELS = 3
 
     X_val = np.zeros((num_val_img, IMG_HEIGHT, IMG_WIDTH, IMG_CHANNELS), dtype=np.float32)
 
