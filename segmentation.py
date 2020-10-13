@@ -8,7 +8,7 @@ import matplotlib
 
 matplotlib.use('TkAgg')
 
-from Aerial_DataSet_Parser import aerialValidationData
+from aerialDatasetParser import aerialValidationData
 
 
 seed = 42

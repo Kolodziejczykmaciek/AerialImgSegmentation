@@ -7,8 +7,8 @@ import matplotlib.pyplot as plt
 import matplotlib
 matplotlib.use('TkAgg')
 
-from Aerial_DataSet_Parser import aerialDataTrain
-from Unet_Model import UnetModel
+from aerialDatasetParser import aerialDataTrain
+from unetModel import UnetModel
 
 seed = 42
 np.random.seed = seed
