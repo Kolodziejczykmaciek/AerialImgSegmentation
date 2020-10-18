@@ -5,7 +5,7 @@ import os
 import cv2
 
 
-np.random.seed(1000)
+np.random.seed = 1000
 
 '''
     Dowanload dataset useed in this project in https://project.inria.fr/aerialimagelabeling/
@@ -31,8 +31,12 @@ def aerialDataPrepare(num_train_img):
     X_train = np.zeros((num_train_img, IMG_HEIGHT, IMG_WIDTH, IMG_CHANNELS), dtype=np.uint8)
     Y_train = np.zeros((num_train_img, IMG_HEIGHT, IMG_WIDTH, 1), dtype=np.bool)
 
+    # TODO: remove it
     image_directory = r'C:/Users/macie/PycharmProjects/pythonProject/aerial_dataSet/NEW2-AerialImageDataset/AerialImageDataset/train/images/'
     mask_directory = r'C:/Users/macie/PycharmProjects/pythonProject/aerial_dataSet/NEW2-AerialImageDataset/AerialImageDataset/train/gt/'
+
+    image_directory = os.path.join('aerial_dataSet', 'NEW2-AerialImageDataset', 'AerialImageDataset', 'train', 'images')
+    mask_directory = os.path.join('aerial_dataSet', 'NEW2-AerialImageDataset', 'AerialImageDataset', 'train', 'gt')
 
     cords = (0, 512, 1024, 1536, 2048, 2560, 3072, 3584, 4096, 4487)
     image_resolution = 512
@@ -81,7 +85,10 @@ def aerialValidationData(num_val_img):
 
     X_val = np.zeros((num_val_img, IMG_HEIGHT, IMG_WIDTH, IMG_CHANNELS), dtype=np.float32)
 
-    image_directory = r'C:/Users/macie/PycharmProjects/pythonProject/aerial_dataSet/NEW2-AerialImageDataset/AerialImageDataset/test/images/' #specify path to validation images
+    # TODO: remove it
+    image_directory = r'C:/Users/marcin/Desktop/workSpace/telephoners/DRONY/AerialImgSegmentation/aerial_dataSet/NEW2-AerialImageDataset/AerialImageDataset/test/images/' #specify path to validation images
+
+    image_directory = os.path.join('aerial_dataSet', 'NEW2-AerialImageDataset', 'AerialImageDataset', 'test', 'images')
 
     cords = (0, 512, 1024, 1536, 2048, 2560, 3072, 3584, 4096, 4487)
     image_resolution = 512

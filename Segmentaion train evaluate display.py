@@ -19,7 +19,7 @@ np.random.seed = seed
 # print("Dl listy X_train: {} \nDl listy Y_train: {}".format(len(X_train), len(Y_train)))
 
 
-X_val = aerialValidationData(1000) # get validation data
+X_val = aerialValidationData(100) # get validation data
 #
 # for i in range(20): # Can use this loop to look through loaded train/val images
 #
@@ -58,7 +58,7 @@ X_val = aerialValidationData(1000) # get validation data
     -plot semgentated images
 '''
 print("Loading model from save...")
-model = tf.keras.models.load_model(r"C:/Users/macie/PycharmProjects/AerialImgSegmentation/Trained_models/AerialDataSet_p2_bs10_4ktrainimg")
+model = tf.keras.models.load_model("Trained_models/AerialDataSet_p2_bs10_4ktrainimg")
 print("Model has been loaded!")
 
 X_val = X_val[0:1]

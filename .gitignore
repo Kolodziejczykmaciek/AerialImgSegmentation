@@ -1,0 +1,13 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Editor dirs
+.idea/
+
+# Logs
+logs/
+
+# Venvs
+venv/
